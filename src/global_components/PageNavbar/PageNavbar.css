@@ -1,0 +1,13 @@
+.lg-logo {
+    filter: brightness(0) invert(1);
+    width: 80px;
+    height: 80px;
+}
+
+.left-links,
+.right-links {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
