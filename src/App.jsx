@@ -12,17 +12,19 @@ import NotFoundPage from './global_components/NotFoundPage/NotFoundPage';
 function App() {
   return (
     <>
-      <div className='navbar-container'>
-      </div>
       <Router>
-      <div>
-        <PageNavbar />
+      <div className='app-container'>
+        <div className='navbar-container'>
+          <PageNavbar />
+        </div>
+        <div className='content'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects/:projectName" element={<ProjectPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        </div>
       </div>
     </Router>
     </>
