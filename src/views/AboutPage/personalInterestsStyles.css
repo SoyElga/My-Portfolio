@@ -1,0 +1,56 @@
+.carrousell-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .pi-carrousel {
+    width: 40%;
+    border: 5px solid #10403B;
+    position: relative;
+    height: 22.5%;
+  }
+  
+  .pi-carrousel .carousel-item {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+  
+  .pi-carrousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+  
+  .details {
+    width: 60%;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .details h3 {
+    font-size: 40px;
+    font-weight: 650;
+    text-align: center;
+  }
+
+  .details p {
+    text-align: center;
+  }
+
+  @keyframes fadeOutIn {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+  .details-enter {
+    animation: fadeOutIn 0.5s ease-in;
+  }

@@ -1,0 +1,11 @@
+@keyframes fadeOutIn {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.tooltip-message {
+    animation-name: fadeOutIn;
+    animation-duration: 0.5s; /* Total duration: 0.25s fade-out + 0.25s fade-in */
+    animation-timing-function: ease-in-out;
+}

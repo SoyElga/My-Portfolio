@@ -1,0 +1,160 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.name-section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    animation: fadeIn 1s;
+}
+
+.name-section .text {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-section .text .name h1 {
+    font-size: 64px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.name-section .text .name h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.name-section .picture {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.name-section .picture img.personal-pic {
+    width: 300px;
+    height: 300px;
+    border: 5px solid black ;
+    border-radius: 50%;
+    background-color: #8AA6A3;
+}
+
+.education-experience,
+.work-experience, 
+.project-history,
+.skills,
+.certificates-contests,
+.personal-interests,
+.contact-list {
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    animation: fadeIn 1s;
+}
+
+.education-experience .content {
+    display: flex;
+}
+
+.education-experience .content .text {
+    width: 60%;
+}
+    .education-experience .content .image {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-experience .content .image img {
+    width: 250px;
+    height: auto;
+}
+
+.work-experience .text {
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 650;
+    margin-bottom: 40px;
+}
+
+.work-experience .jobs .job-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-experience .jobs ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.work-experience .jobs li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+hr.section-separator {
+    border-top: 3px solid #212529;
+}
+
+.certificates-contests .contests .contest,
+.certificates-contests .certificates .certificate {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.certificates-contests .contests .contest .description,
+.certificates-contests .certificates .certificate .description {
+    flex-shrink: 1;
+    text-align: justify;
+    width: 60%;
+}
+
+.certificates-contests .contests img,
+.certificates-contests .certificates img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid #212529;
+    border-radius: 8%;
+    display: block;
+    flex-shrink: 2;
+}
+
+@media screen and (max-width: 900px) {
+    .certificates-contests .contests img, 
+    .certificates-contests .certificates img {
+        display: none;
+    }
+}
+
+.contact-list .header {
+    text-align: center;
+}
+
+.contact-list .contacts {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.contact-list .contacts .contact-container {
+    width: 50px;
+    height: auto;
+}

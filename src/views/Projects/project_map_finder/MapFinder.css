@@ -1,0 +1,43 @@
+.project-page {
+    display: flex
+}
+
+.project-page .content {
+    flex: 1 1 100%;
+    width: 700px;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.selector {
+    width: 600px; /* same as map grid */
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.option {
+    width: 50px;
+    height: 50px;
+}
+
+.selector .option.active {
+    border: 5px solid #127369;
+}
+
+.reset-button {
+    width: 600px;
+}
+
+.solving-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: left;
+}
