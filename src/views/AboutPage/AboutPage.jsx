@@ -28,7 +28,7 @@ function AboutPage(props) {
                 <div className='text'>
                     <div className='name'>
                         <h1>Luis Gabriel</h1>
-                        <h2>Martinez Renteria</h2>
+                        <h2>Martínez Rentería</h2>
                     </div>
                     <hr />
                     <div className='title'>

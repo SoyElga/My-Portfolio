@@ -71,6 +71,10 @@ function PersonalInterests(props) {
                 {Object.entries(personalInterestsList).map(([key, { img }], index) => (
                     <Carousel.Item key={index} interval={animationTime}>
                         <img className="carrousel-image" src={img} alt={key} />
+                        <Carousel.Caption className='small-page-carrousel'>
+                          <h3>{textContent.title}</h3>
+                          <p>{textContent.description}</p>
+                        </Carousel.Caption>
                     </Carousel.Item>
                 ))}
             </Carousel>

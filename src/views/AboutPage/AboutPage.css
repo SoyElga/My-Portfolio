@@ -36,6 +36,7 @@
     height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .name-section .picture img.personal-pic {
@@ -142,6 +143,12 @@ hr.section-separator {
     .certificates-contests .certificates img {
         display: none;
     }
+
+    .certificates-contests .contests .contest .description,
+    .certificates-contests .certificates .certificate .description {
+    text-align: justify;
+    width: 100%;
+}
 }
 
 .contact-list .header {

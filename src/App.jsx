@@ -9,6 +9,8 @@ import AboutPage from './views/AboutPage/AboutPage';
 import ProjectPage from './views/Projects/ProjectPage';
 import NotFoundPage from './global_components/NotFoundPage/NotFoundPage';
 
+import AlertIcon from './assets/alert_icon.png';
+
 function App() {
   return (
     <>
@@ -27,6 +29,10 @@ function App() {
         </div>
       </div>
     </Router>
+    <div className='alert-message'>
+      <img src={ AlertIcon } alt="Alert!" />
+      <h1>This website is deigned to fit in a min 600px width page</h1>
+    </div>
     </>
   )
 }

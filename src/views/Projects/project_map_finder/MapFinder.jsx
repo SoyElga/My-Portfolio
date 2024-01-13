@@ -5,10 +5,11 @@ import Grid from './components/Grid';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 
-import GrassTile from './assets/grass.png'
-import WallTile from './assets/wall.png'
-import CharacterTile from './assets/character.png'
-import GoalTile from './assets/goal.png'
+import GrassTile from './assets/grass.png';
+import WallTile from './assets/wall.png';
+import CharacterTile from './assets/character.png';
+import GoalTile from './assets/goal.png';
+import AStarPseudocode from './assets/A_star_pseudo.svg';
 
 import './MapFinder.css'
 
@@ -63,18 +64,9 @@ function MapFinder(props) {
                     </div>
                 </div>
                 <div className='solving-options'>
-                    <Dropdown>
-                      <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Solving options
-                      </Dropdown.Toggle>
-
-                      <Dropdown.Menu>
-                        <Dropdown.Item>Breadth-First Search</Dropdown.Item>
-                        <Dropdown.Item>Depth-First Search</Dropdown.Item>
-                        <Dropdown.Item>A* Search</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                    <Button variant='warning' onClick={handleButtonSolveLab}>Solve Labyrinth</Button>
+                    <h1 className='algorith-name-banner'>A* Algorith</h1>
+                    <img className="pseudocode" src={ AStarPseudocode } alt="A star Pseudocode" />
+                    <Button variant='warning' className='solve-button' onClick={handleButtonSolveLab}>Solve Labyrinth</Button>
                 </div>  
             </div>
         </div>

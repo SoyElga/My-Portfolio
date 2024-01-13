@@ -5,6 +5,9 @@
 
 .main-page {
     animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-page .welcome-message {
@@ -41,6 +44,28 @@
     padding: 10px;
     background-color: #8AA6A3;
     border: 3px solid #10403B;
+}
+
+@media screen and (max-width: 1250px){    
+    .main-page .projects-section {
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-page .projects-section .project-card {
+        flex: 0 1 255px;
+        min-width: 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: #8AA6A3;
+        border: 3px solid #10403B;
+    }
 }
 
 .main-page .projects-section .project-card .card-image {
