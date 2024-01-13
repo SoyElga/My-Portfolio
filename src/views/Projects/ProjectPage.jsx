@@ -9,14 +9,11 @@ function ProjectPage() {
 
   let projectComponent;
   switch (projectName) {
-    case 'project-a':
+    case 'labyrinth-solver':
       projectComponent = <MapFinder></MapFinder>;
       break;
-      case 'project-b':
-          projectComponent = <h1>Este es el proyecto 2</h1>;
-      break;
     default:
-      projectComponent = <div>Proyecto no encontrado</div>;
+      projectComponent = <h1>The project you are looking for has not been found</h1>;
   }
 
   return <div>{projectComponent}</div>;

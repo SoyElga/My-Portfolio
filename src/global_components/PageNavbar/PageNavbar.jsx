@@ -23,8 +23,8 @@ function PageNavbar() {
                   </Navbar.Brand>
                   <Nav className="right-links">
                     <NavDropdown title="Projects" id="navbarScrollingDropdown">
-                      <NavDropdown.Item href="/projects/project-a">Project A</NavDropdown.Item>
-                      <NavDropdown.Item href="/projects/project-b">Project B</NavDropdown.Item>
+                      <NavDropdown.Item href="/projects/labyrinth-solver">Labyrinth Solver</NavDropdown.Item>
+                      {/* <NavDropdown.Item href="/projects/project-b">Project B</NavDropdown.Item> */}
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/projects/">
                         See all projects

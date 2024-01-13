@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { POST } from '../../../utils/AuthService';
+
 import Grid from './components/Grid';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -11,14 +13,30 @@ import GoalTile from './assets/goal.png'
 import './MapFinder.css'
 
 function MapFinder(props) {
-    const [selectedBlock, setSelectedBlock] = useState(0)
+    const [selectedBlock, setSelectedBlock] = useState(0);
+    const [solution, setSolution] = useState([]);
 
-    const blocks = [GrassTile, WallTile, CharacterTile, GoalTile]
+    const blocks = [GrassTile, WallTile, CharacterTile, GoalTile];
     const gridRef = useRef();
 
     const handleReset = () => {
         gridRef.current.resetGrid();
+        setSolution([])
       };
+
+    const handleButtonSolveLab = async () => {
+        try{
+            const gridState = gridRef.current.getMapInformation();
+            const response = await POST('/solve-labyrinth/a-star', gridState)
+            if (response.statusCode === 200) {
+                setSolution(response.data)
+            } else {
+                alert(`Error: ${response.message}`)
+            }
+        } catch (error) {
+            alert(`There was an error in the connection: ${error}`)
+        }
+    };
 
     return (
         <div>
@@ -26,7 +44,7 @@ function MapFinder(props) {
             <div className='project-page'>
                 <div className='content'>
                     <div className='map'>
-                        <Grid ref={gridRef} selectedOption={selectedBlock}></Grid>
+                        <Grid ref={gridRef} selectedOption={selectedBlock} solution={solution.length > 0 ? solution : null}></Grid>
                         <div className='selector'>
                         {blocks.map((block, blockIndex) => (
                         <div 
@@ -56,7 +74,7 @@ function MapFinder(props) {
                         <Dropdown.Item>A* Search</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                    <Button variant='warning'>Solve Labyrinth</Button>
+                    <Button variant='warning' onClick={handleButtonSolveLab}>Solve Labyrinth</Button>
                 </div>  
             </div>
         </div>

@@ -11,6 +11,7 @@ import GoalTile from '../assets/goal.png'
 const Grid = forwardRef((props, ref) => {
     const [grid, setGrid] = useState(createInitialGrid());
     const [isMouseDown, setIsMouseDown] = useState(false);
+    //First row, then column
     const [characterPosition, setCharacterPosition] = useState([18,18])
     const [goalPosition, setGoalPosition] = useState([1,1])
 
@@ -32,7 +33,17 @@ const Grid = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
         resetGrid() {
           setGrid(createInitialGrid());
-        }
+        },
+        getMapInformation: () => {
+          return {
+              labyrinth: grid,
+              start_row: characterPosition[0],
+              start_col: characterPosition[1],
+              goal_row: goalPosition[0],
+              goal_col: goalPosition[1]
+          };
+      }
+
       }));
 
     const handleMouseOver = (row, col) => {
@@ -62,7 +73,7 @@ const Grid = forwardRef((props, ref) => {
                     } else if (props.selectedOption === 3) {
                         setGoalPosition([row, col])
                     }
-                }else console.log("NO SE PUEDE")
+                }
             }
         }
     }
@@ -73,6 +84,12 @@ const Grid = forwardRef((props, ref) => {
 
     const handleMouseUp = () => {
       setIsMouseDown(false);
+    };
+
+    const isSolutionTile = (rowIndex, colIndex) => {
+      if (props.solution) {
+        return props.solution.some(([col, row]) => row === rowIndex && col === colIndex);
+      }
     };
 
     return (
@@ -91,9 +108,11 @@ const Grid = forwardRef((props, ref) => {
                       onMouseOver={() => handleMouseOver(rowIndex, colIndex)}
                       onClick={() => clickCharacterGoalPosition(rowIndex, colIndex)}
                       style={{
-                        backgroundImage: `url(${col === 0 ? GrassTile : WallTile})`,
+                        backgroundImage: isSolutionTile(rowIndex, colIndex) 
+                            ? `linear-gradient(rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.7)), url(${col === 0 ? GrassTile : WallTile})` 
+                            : `url(${col === 0 ? GrassTile : WallTile})`,
                         backgroundSize: 'cover'
-                      }}
+                    }}
                     >
                         {(characterPosition[0] === rowIndex && characterPosition[1] === colIndex) ?
                         <div className='character'
