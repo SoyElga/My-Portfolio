@@ -40,7 +40,7 @@ function MapFinder(props) {
 
     return (
         <div>
-            <h1>Labyrinth solver</h1>
+            <h1 className='page-title'>Labyrinth solver</h1>
             <div className='project-page'>
                 <div className='content'>
                     <div className='map'>

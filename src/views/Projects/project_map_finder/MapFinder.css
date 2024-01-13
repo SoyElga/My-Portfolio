@@ -1,5 +1,12 @@
-.project-page {
-    display: flex
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.project-page,
+.page-title {
+    display: flex;
+    animation: fadeIn 1s;
 }
 
 .project-page .content {
@@ -13,7 +20,7 @@
 }
 
 .selector {
-    width: 600px; /* same as map grid */
+    width: 600px;
     height: 60px;
     display: flex;
     justify-content: space-around;
