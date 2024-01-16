@@ -18,10 +18,10 @@ function PageNavbar() {
             <Navbar bg="dark" data-bs-theme="dark" className='large-navbar'>
                 <Container className='justify-content-md-center lg'>
                   <Nav className="left-links">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href={`${base_url}/`}>Home</Nav.Link>
                     <Nav.Link href={`${base_url}/about`}>About Me</Nav.Link>
                   </Nav>
-                  <Navbar.Brand href="/">
+                  <Navbar.Brand href={`${base_url}/`}>
                     <img src={LGLogo} className="lg-logo" alt="Logo" />    
                   </Navbar.Brand>
                   <Nav className="right-links">
