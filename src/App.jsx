@@ -12,6 +12,9 @@ import NotFoundPage from './global_components/NotFoundPage/NotFoundPage';
 import AlertIcon from './assets/alert_icon.png';
 
 function App() {
+
+  const base_path = "/My-Portfolio"
+
   return (
     <>
       <Router>
@@ -21,9 +24,9 @@ function App() {
         </div>
         <div className='content'>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects/:projectName" element={<ProjectPage />} />
+          <Route path={`${base_path}/`} element={<HomePage />} />
+          <Route path={`${base_path}/about`} element={<AboutPage />} />
+          <Route path={`${base_path}/projects/:projectName`} element={<ProjectPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         </div>
