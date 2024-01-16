@@ -66,6 +66,11 @@
         background-color: #8AA6A3;
         border: 3px solid #10403B;
     }
+    
+}
+
+.main-page .projects-section .project-card a .btn {
+    width: 100%;
 }
 
 .main-page .projects-section .project-card .card-image {

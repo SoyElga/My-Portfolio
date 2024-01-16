@@ -152,7 +152,7 @@ function AboutPage(props) {
                                 <li>We picked the best model based on the R<sup>2</sup>, MAE, MSE and RMSE (Random Forest Regressor in our case) and we tried to find the best hiperparameters to the model using GridSearch</li>
                                 <li>We developed a web application using Flask to be able to try the model and make predictions, as well to showcase the project objective and the team</li>
                             </ul>
-                            <a href="" className='outside-project-link'>Link to the web app</a>
+                            <a href="https://concrete-project.onrender.com/" target="_blank" className='outside-project-link'>Link to the web app</a>
                         </div>
                         <br />
                         <div className='project'>

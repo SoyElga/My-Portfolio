@@ -26,7 +26,7 @@ function PageNavbar() {
                       <NavDropdown.Item href="/projects/labyrinth-solver">Labyrinth Solver</NavDropdown.Item>
                       {/* <NavDropdown.Item href="/projects/project-b">Project B</NavDropdown.Item> */}
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="/projects/">
+                      <NavDropdown.Item href="https://github.com/SoyElga/portfolio-projects" target='_blank'>
                         See all projects
                       </NavDropdown.Item>
                 </NavDropdown>

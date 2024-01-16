@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import MapFinder from './project_map_finder/MapFinder';
+import NotFoundPage from '../../global_components/NotFoundPage/NotFoundPage'
 
 function ProjectPage() {
   const { projectName } = useParams();
@@ -13,7 +14,7 @@ function ProjectPage() {
       projectComponent = <MapFinder></MapFinder>;
       break;
     default:
-      projectComponent = <h1>The project you are looking for has not been found</h1>;
+      projectComponent = <NotFoundPage></NotFoundPage>;
   }
 
   return <div>{projectComponent}</div>;

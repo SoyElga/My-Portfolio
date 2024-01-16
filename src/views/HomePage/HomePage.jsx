@@ -21,7 +21,7 @@ function HomePage(props) {
                         <Card.Text>
                           This is a little project where you can draw a labyrinth for the character to find the quickest route to the castle, have fun!
                         </Card.Text>
-                        <Button variant="secondary">Go to project</Button>
+                        <a href="/projects/labyrinth-solver"><Button variant="secondary">Go to project</Button></a>
                       </Card.Body>
                     </Card>
                     <Card className='project-card'>
@@ -31,7 +31,7 @@ function HomePage(props) {
                         <Card.Text>
                           This is a link to a github repo where I added some of the projects I developed during my career or in my free time
                         </Card.Text>
-                        <Button variant="secondary">Go to repo</Button>
+                        <a href="https://github.com/SoyElga/portfolio-projects" target='_blank'><Button variant="secondary">Go to repo</Button></a>
                       </Card.Body>
                     </Card>
                 </div>
