@@ -8,6 +8,7 @@ import GithubProjectsImg from './assets/github.png'
 import './HomePage.css'
 
 function HomePage(props) {
+  const base_url = "/My-Portfolio/#"
     return (
         <div className='main-page'>
             <h1 className='welcome-message'>Welcome to my portfolio!</h1>
@@ -21,7 +22,7 @@ function HomePage(props) {
                         <Card.Text>
                           This is a little project where you can draw a labyrinth for the character to find the quickest route to the castle, have fun!
                         </Card.Text>
-                        <a href="/projects/labyrinth-solver"><Button variant="secondary">Go to project</Button></a>
+                        <a href={`${base_url}/projects/labyrinth-solver`}><Button variant="secondary">Go to project</Button></a>
                       </Card.Body>
                     </Card>
                     <Card className='project-card'>
