@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const client = axios.create({
-    baseURL: "http://54.227.184.76",
+    baseURL: "https://aplxlaektwhemot64n6m3we2ca0hmmgm.lambda-url.us-east-1.on.aws",
     timeout: 5000,
     headers: {
         'Content-Type': 'application/json',
